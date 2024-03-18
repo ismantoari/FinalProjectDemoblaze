@@ -1,5 +1,6 @@
 package stepDef;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import page.HomePage;
 
@@ -10,5 +11,10 @@ public class HomeStepdefs {
     public void userSeeNotifPopUp(String textPopup) throws InterruptedException {
         homePage.userSeeNotifPopup(textPopup);
 
+    }
+
+    @And("user click OK button on notification")
+    public void userClickOkButtonOnNotification() {
+        homePage.userClickOkButtonOnNotification();
     }
 }

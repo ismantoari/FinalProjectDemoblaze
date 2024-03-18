@@ -14,15 +14,18 @@ public class HomePage {
 
     public void userSeeNotifPopup(String textPopup) throws InterruptedException {
 
+        Thread.sleep(2000);
         Alert alert = driver.switchTo().alert();
-
-        Thread.sleep(100);
 
         String actualTextPopup = alert.getText();
         System.out.println("actual notif : " + actualTextPopup);
         System.out.println("expected notif : " + textPopup);
+        Assert.assertEquals(textPopup,actualTextPopup);
+        driver.switchTo().alert().accept();
+    }
 
-        // Assert.assertEquals(textPopup,actualTextPopup);
+    public void userClickOkButtonOnNotification(){
+        driver.switchTo().alert().accept();
     }
 
 
