@@ -30,12 +30,12 @@ Feature: Sign Up
     And user input username ""
     And user input password ""
     When user click sign up button
-    Then user see notification pop up "Please fill out Username and Password."
+    Then user see notification pop up "Please fill out Username and Passworduser click phone categories."
 
 
   @web
   Scenario: Sign up with username that already exist
-    Given user is on sign up form
+    Given user is onuser click phones categories sign up form
     And user input username "megauser2024"
     And user input password "FinalProject_2024"
     When user click sign up button
